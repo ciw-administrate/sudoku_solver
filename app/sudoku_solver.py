@@ -9,3 +9,14 @@ class SudokuSolver(object):
         for number in row:
             total += number
         return total
+
+    @staticmethod
+    def sum_of_column(solution: List[List[int]], column_number: int) -> int:
+        column: List[int] = []
+        row: List[int]
+        for i in range(len(solution)):
+            column.append(solution[i][column_number])
+        total: int = 0
+        for number in column:
+            total += number
+        return total
