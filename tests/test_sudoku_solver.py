@@ -31,3 +31,8 @@ class TestSudokuSolver(unittest.TestCase):
         expected_value = 45
         sum_of_first_row = SudokuSolver.sum_of_row(TestSudokuSolver.solution_one, 0)
         self.assertEqual(sum_of_first_row, expected_value)
+
+    def test_sum_of_first_column_equals_45(self):
+        expected_value = 45
+        sum_of_first_column = SudokuSolver.sum_of_column(TestSudokuSolver.solution_one, 0)
+        self.assertEqual(sum_of_first_column, expected_value)
