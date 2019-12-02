@@ -36,3 +36,8 @@ class TestSudokuSolver(unittest.TestCase):
         expected_value = 45
         sum_of_first_column = SudokuSolver.sum_of_column(TestSudokuSolver.solution_one, 0)
         self.assertEqual(sum_of_first_column, expected_value)
+
+    def test_first_row_contains_each_number_from_1_to_9(self):
+        expected_value = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        sorted_row = SudokuSolver.sort_row(TestSudokuSolver.solution_one, 0)
+        self.assertEqual(expected_value, sorted_row)
